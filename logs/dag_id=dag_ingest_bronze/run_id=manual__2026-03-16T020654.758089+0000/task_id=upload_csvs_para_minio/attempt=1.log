@@ -1,0 +1,36 @@
+[2026-03-16T02:06:57.688+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-16T02:06:57.712+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_ingest_bronze.upload_csvs_para_minio manual__2026-03-16T02:06:54.758089+00:00 [queued]>
+[2026-03-16T02:06:57.720+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_ingest_bronze.upload_csvs_para_minio manual__2026-03-16T02:06:54.758089+00:00 [queued]>
+[2026-03-16T02:06:57.786+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-16T02:06:57.984+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): upload_csvs_para_minio> on 2026-03-16 02:06:54.758089+00:00
+[2026-03-16T02:06:57.992+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=417) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-16T02:06:57.991+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_ingest_bronze', 'upload_csvs_para_minio', 'manual__2026-03-16T02:06:54.758089+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/dag_ingest_bronze.py', '--cfg-path', '/tmp/tmpk97shcor']
+[2026-03-16T02:06:57.993+0000] {standard_task_runner.py:63} INFO - Started process 418 to run task
+[2026-03-16T02:06:57.994+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask upload_csvs_para_minio
+[2026-03-16T02:06:58.246+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_ingest_bronze.upload_csvs_para_minio manual__2026-03-16T02:06:54.758089+00:00 [running]> on host 590a41d64472
+[2026-03-16T02:06:58.624+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_ingest_bronze' AIRFLOW_CTX_TASK_ID='upload_csvs_para_minio' AIRFLOW_CTX_EXECUTION_DATE='2026-03-16T02:06:54.758089+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-16T02:06:54.758089+00:00'
+[2026-03-16T02:06:58.629+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-16T02:06:58.684+0000] {logging_mixin.py:188} INFO - Enviando olist_customers_dataset.csv para o bucket olist-raw...
+[2026-03-16T02:07:01.338+0000] {logging_mixin.py:188} INFO - ✓ olist_customers_dataset.csv enviado com sucesso!
+[2026-03-16T02:07:01.339+0000] {logging_mixin.py:188} INFO - Enviando olist_geolocation_dataset.csv para o bucket olist-raw...
+[2026-03-16T02:07:07.722+0000] {logging_mixin.py:188} INFO - ✓ olist_geolocation_dataset.csv enviado com sucesso!
+[2026-03-16T02:07:07.723+0000] {logging_mixin.py:188} INFO - Enviando olist_orders_dataset.csv para o bucket olist-raw...
+[2026-03-16T02:07:09.473+0000] {logging_mixin.py:188} INFO - ✓ olist_orders_dataset.csv enviado com sucesso!
+[2026-03-16T02:07:09.474+0000] {logging_mixin.py:188} INFO - Enviando olist_order_items_dataset.csv para o bucket olist-raw...
+[2026-03-16T02:07:11.319+0000] {logging_mixin.py:188} INFO - ✓ olist_order_items_dataset.csv enviado com sucesso!
+[2026-03-16T02:07:11.320+0000] {logging_mixin.py:188} INFO - Enviando olist_order_payments_dataset.csv para o bucket olist-raw...
+[2026-03-16T02:07:12.739+0000] {logging_mixin.py:188} INFO - ✓ olist_order_payments_dataset.csv enviado com sucesso!
+[2026-03-16T02:07:12.740+0000] {logging_mixin.py:188} INFO - Enviando olist_order_reviews_dataset.csv para o bucket olist-raw...
+[2026-03-16T02:07:14.059+0000] {logging_mixin.py:188} INFO - ✓ olist_order_reviews_dataset.csv enviado com sucesso!
+[2026-03-16T02:07:14.060+0000] {logging_mixin.py:188} INFO - Enviando olist_products_dataset.csv para o bucket olist-raw...
+[2026-03-16T02:07:14.781+0000] {logging_mixin.py:188} INFO - ✓ olist_products_dataset.csv enviado com sucesso!
+[2026-03-16T02:07:14.782+0000] {logging_mixin.py:188} INFO - Enviando olist_sellers_dataset.csv para o bucket olist-raw...
+[2026-03-16T02:07:15.132+0000] {logging_mixin.py:188} INFO - ✓ olist_sellers_dataset.csv enviado com sucesso!
+[2026-03-16T02:07:15.133+0000] {logging_mixin.py:188} INFO - Enviando product_category_name_translation.csv para o bucket olist-raw...
+[2026-03-16T02:07:15.290+0000] {logging_mixin.py:188} INFO - ✓ product_category_name_translation.csv enviado com sucesso!
+[2026-03-16T02:07:15.292+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-16T02:07:15.292+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-16T02:07:15.300+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_ingest_bronze, task_id=upload_csvs_para_minio, run_id=manual__2026-03-16T02:06:54.758089+00:00, execution_date=20260316T020654, start_date=20260316T020657, end_date=20260316T020715
+[2026-03-16T02:07:15.423+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-16T02:07:15.436+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T02:07:15.519+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

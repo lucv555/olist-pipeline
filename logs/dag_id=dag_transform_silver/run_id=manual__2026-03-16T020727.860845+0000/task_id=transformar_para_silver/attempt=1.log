@@ -1,0 +1,72 @@
+[2026-03-16T02:07:32.503+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-16T02:07:32.523+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_transform_silver.transformar_para_silver manual__2026-03-16T02:07:27.860845+00:00 [queued]>
+[2026-03-16T02:07:32.529+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_transform_silver.transformar_para_silver manual__2026-03-16T02:07:27.860845+00:00 [queued]>
+[2026-03-16T02:07:32.590+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-16T02:07:32.784+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transformar_para_silver> on 2026-03-16 02:07:27.860845+00:00
+[2026-03-16T02:07:32.800+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_transform_silver', 'transformar_para_silver', 'manual__2026-03-16T02:07:27.860845+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag_transform_silver.py', '--cfg-path', '/tmp/tmplk5ocwtm']
+[2026-03-16T02:07:32.803+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=452) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-16T02:07:32.804+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask transformar_para_silver
+[2026-03-16T02:07:32.805+0000] {standard_task_runner.py:63} INFO - Started process 456 to run task
+[2026-03-16T02:07:33.042+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_transform_silver.transformar_para_silver manual__2026-03-16T02:07:27.860845+00:00 [running]> on host 590a41d64472
+[2026-03-16T02:07:33.495+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_transform_silver' AIRFLOW_CTX_TASK_ID='transformar_para_silver' AIRFLOW_CTX_EXECUTION_DATE='2026-03-16T02:07:27.860845+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-16T02:07:27.860845+00:00'
+[2026-03-16T02:07:33.497+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-16T02:07:33.507+0000] {logging_mixin.py:188} INFO - 
+==================================================
+[2026-03-16T02:07:33.508+0000] {logging_mixin.py:188} INFO - Processando: olist_orders_dataset.csv
+[2026-03-16T02:07:33.796+0000] {logging_mixin.py:188} INFO -   Linhas brutas: 99441
+[2026-03-16T02:07:33.910+0000] {logging_mixin.py:188} INFO -   Linhas após limpeza: 99441
+[2026-03-16T02:07:36.030+0000] {logging_mixin.py:188} INFO -   ✓ Salvo em silver/olist_orders_dataset.parquet
+[2026-03-16T02:07:36.031+0000] {logging_mixin.py:188} INFO - 
+==================================================
+[2026-03-16T02:07:36.031+0000] {logging_mixin.py:188} INFO - Processando: olist_customers_dataset.csv
+[2026-03-16T02:07:36.185+0000] {logging_mixin.py:188} INFO -   Linhas brutas: 99441
+[2026-03-16T02:07:36.199+0000] {logging_mixin.py:188} INFO -   Linhas após limpeza: 99441
+[2026-03-16T02:07:37.622+0000] {logging_mixin.py:188} INFO -   ✓ Salvo em silver/olist_customers_dataset.parquet
+[2026-03-16T02:07:37.622+0000] {logging_mixin.py:188} INFO - 
+==================================================
+[2026-03-16T02:07:37.623+0000] {logging_mixin.py:188} INFO - Processando: olist_order_items_dataset.csv
+[2026-03-16T02:07:37.842+0000] {logging_mixin.py:188} INFO -   Linhas brutas: 112650
+[2026-03-16T02:07:37.885+0000] {logging_mixin.py:188} INFO -   Linhas após limpeza: 112650
+[2026-03-16T02:07:38.705+0000] {logging_mixin.py:188} INFO -   ✓ Salvo em silver/olist_order_items_dataset.parquet
+[2026-03-16T02:07:38.706+0000] {logging_mixin.py:188} INFO - 
+==================================================
+[2026-03-16T02:07:38.706+0000] {logging_mixin.py:188} INFO - Processando: olist_products_dataset.csv
+[2026-03-16T02:07:38.733+0000] {logging_mixin.py:188} INFO -   Linhas brutas: 32951
+[2026-03-16T02:07:38.736+0000] {logging_mixin.py:188} INFO -   Linhas após limpeza: 32951
+[2026-03-16T02:07:39.229+0000] {logging_mixin.py:188} INFO -   ✓ Salvo em silver/olist_products_dataset.parquet
+[2026-03-16T02:07:39.230+0000] {logging_mixin.py:188} INFO - 
+==================================================
+[2026-03-16T02:07:39.232+0000] {logging_mixin.py:188} INFO - Processando: olist_sellers_dataset.csv
+[2026-03-16T02:07:39.240+0000] {logging_mixin.py:188} INFO -   Linhas brutas: 3095
+[2026-03-16T02:07:39.242+0000] {logging_mixin.py:188} INFO -   Linhas após limpeza: 3095
+[2026-03-16T02:07:39.862+0000] {logging_mixin.py:188} INFO -   ✓ Salvo em silver/olist_sellers_dataset.parquet
+[2026-03-16T02:07:39.863+0000] {logging_mixin.py:188} INFO - 
+==================================================
+[2026-03-16T02:07:39.864+0000] {logging_mixin.py:188} INFO - Processando: olist_order_payments_dataset.csv
+[2026-03-16T02:07:39.930+0000] {logging_mixin.py:188} INFO -   Linhas brutas: 103886
+[2026-03-16T02:07:39.942+0000] {logging_mixin.py:188} INFO -   Linhas após limpeza: 103886
+[2026-03-16T02:07:40.353+0000] {logging_mixin.py:188} INFO -   ✓ Salvo em silver/olist_order_payments_dataset.parquet
+[2026-03-16T02:07:40.355+0000] {logging_mixin.py:188} INFO - 
+==================================================
+[2026-03-16T02:07:40.356+0000] {logging_mixin.py:188} INFO - Processando: olist_order_reviews_dataset.csv
+[2026-03-16T02:07:40.601+0000] {logging_mixin.py:188} INFO -   Linhas brutas: 99224
+[2026-03-16T02:07:40.639+0000] {logging_mixin.py:188} INFO -   Linhas após limpeza: 99224
+[2026-03-16T02:07:42.557+0000] {logging_mixin.py:188} INFO -   ✓ Salvo em silver/olist_order_reviews_dataset.parquet
+[2026-03-16T02:07:42.558+0000] {logging_mixin.py:188} INFO - 
+==================================================
+[2026-03-16T02:07:42.559+0000] {logging_mixin.py:188} INFO - Processando: olist_geolocation_dataset.csv
+[2026-03-16T02:07:43.193+0000] {logging_mixin.py:188} INFO -   Linhas brutas: 1000163
+[2026-03-16T02:07:43.212+0000] {logging_mixin.py:188} INFO -   Linhas após limpeza: 1000163
+[2026-03-16T02:07:45.362+0000] {logging_mixin.py:188} INFO -   ✓ Salvo em silver/olist_geolocation_dataset.parquet
+[2026-03-16T02:07:45.363+0000] {logging_mixin.py:188} INFO - 
+==================================================
+[2026-03-16T02:07:45.363+0000] {logging_mixin.py:188} INFO - Processando: product_category_name_translation.csv
+[2026-03-16T02:07:45.369+0000] {logging_mixin.py:188} INFO -   Linhas brutas: 71
+[2026-03-16T02:07:45.372+0000] {logging_mixin.py:188} INFO -   Linhas após limpeza: 71
+[2026-03-16T02:07:45.445+0000] {logging_mixin.py:188} INFO -   ✓ Salvo em silver/product_category_name_translation.parquet
+[2026-03-16T02:07:45.446+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-16T02:07:45.447+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-16T02:07:45.456+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_transform_silver, task_id=transformar_para_silver, run_id=manual__2026-03-16T02:07:27.860845+00:00, execution_date=20260316T020727, start_date=20260316T020732, end_date=20260316T020745
+[2026-03-16T02:07:45.592+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-16T02:07:45.613+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T02:07:45.786+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
