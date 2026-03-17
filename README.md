@@ -1,3 +1,18 @@
+## 📊 Dashboard Power BI
+
+- 📈 Faturamento total por mês
+- 🏆 Top 10 categorias por receita
+- 🗺️ Faturamento por estado
+- 🔢 KPIs: total de pedidos · faturamento total · ticket médio
+
+![Dashboard](dashboard.png)
+
+**Destaques dos dados:**
+- **112.650** pedidos processados
+- **R$ 15,84 milhões** em faturamento
+- **R$ 140,64** ticket médio
+- **SP** lidera com ~38% do faturamento nacional
+
 # 🛒 Olist Pipeline — Pipeline Analítico End-to-End
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
